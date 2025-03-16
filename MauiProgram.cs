@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using pos_demo.Data;
 
 namespace pos_demo;
 
@@ -20,7 +21,7 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-
-		return builder.Build();
+		builder.Services.AddSingleton<DatabaseService>();
+        return builder.Build();
 	}
 }
