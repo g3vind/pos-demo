@@ -1,4 +1,6 @@
-﻿namespace pos_demo
+﻿using System.Diagnostics;
+
+namespace pos_demo
 {
     public partial class AppShell : Shell
     {
@@ -21,6 +23,18 @@
             {
                 FooterFrame.HasShadow = false;
                 FooterFrame.BackgroundColor = Colors.Transparent; // Revert background
+            }
+
+        }
+        private void OnPhoneTapped(object sender, EventArgs e)
+        {
+            try
+            {
+                Launcher.OpenAsync("tel:+91 6206359037"); // Open dialer with the number
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error launching dialer: " + ex.Message);
             }
         }
 
