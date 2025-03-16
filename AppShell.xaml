@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="pos_demo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:pos_demo"
+    xmlns:Pages="clr-namespace:pos_demo.Pages"
+    Shell.FlyoutBehavior="Locked"
+    Shell.BackgroundColor="WhiteSmoke"
+    Shell.FlyoutWidth="60"
+    Shell.NavBarHasShadow="True"
+    Title="pos_demo">
+
+    <ShellContent
+        Title="Home Page"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate Pages:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+    Title="Manage Menu Items"
+        Icon="edit.png"
+    ContentTemplate="{DataTemplate Pages:ManageMenuItemPage}"
+    Route="ManageMenuItemPage" />
+
+    <ShellContent
+        Title="Orders"
+        Icon="menu.png"
+        ContentTemplate="{DataTemplate Pages:OrdersPage}"
+        Route="OrdersPage" />
+
+    <Shell.FlyoutFooter>
+        <Frame
+        x:Name="FooterFrame"
+        Margin="0,0,0,25"
+        Padding="5"
+        CornerRadius="15"
+        HasShadow="False"
+        BackgroundColor="Transparent"
+        HeightRequest="40"
+        WidthRequest="40"
+        HorizontalOptions="Center">
+
+            <Image
+            x:Name="FooterImage"
+            Aspect="AspectFit"
+            HeightRequest="25"
+            HorizontalOptions="Center"
+            Source="phone.png"
+            WidthRequest="25">
+                <Image.GestureRecognizers>
+                    <PointerGestureRecognizer
+                    PointerEntered="OnPointerEntered"
+                    PointerExited="OnPointerExited" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Frame>
+    </Shell.FlyoutFooter>
+
+
+
+</Shell>
