@@ -1,4 +1,7 @@
-﻿namespace pos_demo.Data
+﻿using pos_demo.Models;
+using MenuItem = pos_demo.Models.MenuItem;
+
+namespace pos_demo.Data
 {
     public static class SeedData
     {

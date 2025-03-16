@@ -1,10 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pos_demo.Pages.MainPage">
+             x:Class="pos_demo.Pages.MainPage"
+             xmlns:vm="clr-namespace:pos_demo.ViewModels"
+             xmlns:data="clr-namespace:pos_demo.Data"
+             xmlns:model="clr-namespace:pos_demo.Models"
+             x:DataType="vm:HomePageViewModel"
+             Shell.NavBarIsVisible="False"
+             xmlns:controls="clr-namespace:pos_demo.Controls">
 
-    <ScrollView>
-        
-    </ScrollView>
+    <Grid ColumnDefinitions=".75*, .25*">
+        <Grid Grid.Column="0" RowDefinitions="Auto, Auto, *">
+            <Label Grid.Row="0" Text="Hello Govind"></Label>
+            <Label Grid.Row="1" Text="Menu Categories"></Label>
+            <Label Grid.Row="2" Text="Menu Items"></Label>
+        </Grid>
+        <Grid Grid.Column="1" Background="Red">
+            <Label Text="Current Order Items"></Label>
+        </Grid>
+    </Grid>
 
 </ContentPage>

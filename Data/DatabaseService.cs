@@ -1,4 +1,6 @@
-﻿using SQLite;
+﻿using pos_demo.Models;
+using SQLite;
+using MenuItem = pos_demo.Models.MenuItem;
 
 namespace pos_demo.Data
 {

@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace pos_demo.Data
+namespace pos_demo.Models
 {
     public class Order
     {
